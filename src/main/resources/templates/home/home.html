@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{main}">
 <head>
-    <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
-<div>
-    <h1>Cryptos</h1>
-</div>
+<section layout:fragment="content">
+    <div id="main"></div>
+    <script th:src="@{cryptos.js}"></script>
+</section>
 </body>
 </html>

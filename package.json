@@ -1,0 +1,32 @@
+{
+  "name": "cryptos",
+  "version": "0.0.1",
+  "main": "src/main/webapp/cryptos/app.tsx",
+  "author": "Dustin Sweigart <dustin@swigg.net>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.38",
+    "@types/react-dom": "^16.0.4",
+    "@types/react-router-dom": "^4.2.4",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.7.2",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.11.0"
+  }
+}

@@ -40,9 +40,10 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-quartz')
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    compile('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.3.0')
     compile('org.springframework.boot:spring-boot-starter-webflux')
 
-    compile('io.github.microutils:kotlin-logging:${kotlinLoggingVersion}')
+    compile("io.github.microutils:kotlin-logging:${kotlinLoggingVersion}")
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('io.projectreactor:reactor-test')
@@ -64,3 +65,8 @@ bootRun {
     sourceResources sourceSets.main
     systemProperties System.properties
 }
+
+task webpack(type: Exec) {
+    commandLine "npm", "run-script", "build"
+}
+build.dependsOn webpack

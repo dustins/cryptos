@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "module": "es6",
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "files": ["src/main/webapp/cryptos/index.tsx"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Layout Page</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{styles/cryptos.css}"/>
+    <script th:src="@{react.js}"></script>
+</head>
+<body>
+<section layout:fragment="content" class="container">
+    <p>Page content goes here</p>
+</section>
+</body>
+</html>
