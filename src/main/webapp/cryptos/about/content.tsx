@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import {Route} from "react-router";
+import {Route, Switch} from "react-router";
 
 interface AboutComponentProperties {
-
+    match: any
 }
 
 export default class About extends Component<AboutComponentProperties,AboutComponentProperties> {
@@ -12,19 +12,30 @@ export default class About extends Component<AboutComponentProperties,AboutCompo
     }
 
     render() {
+        const title = this.props.match.params.id
+        
         return <>
-            <h2 className="row">About</h2>
-
-            <Route component={About1} path="/about/about-1" />
-            <Route component={About2} path="/about/about-2" />
+            <Switch>
+                <Route path="/about/1">
+                    <AboutDetail title={title} />
+                </Route>
+                <Route path="/about/2">
+                    <AboutDetail title={title} />
+                </Route>
+                
+                <Route component={NoMatch} />
+            </Switch>
         </>
     }
 }
 
-const About1 = () => {
-    return <div className="row"><p>About 1</p></div>
+const AboutDetail = (props: any, route: any) => {
+    return <>
+        <h2 className="row">About {props.title}</h2>
+        <div className="row"><p>About {props.title}</p></div>
+    </>
 };
 
-const About2 = () => {
-    return <div className="row"><p>About 2</p></div>
-};
+const NoMatch = () => {
+    return <h2 className="row">Unknown Route</h2>
+}

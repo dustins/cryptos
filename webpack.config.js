@@ -13,6 +13,7 @@ module.exports = {
     devtool: "inline-source-map",
     entry: {
         react: ['react', 'react-dom', 'react-router-dom', 'bootstrap/dist/js/bootstrap.min.js'],
+        'react-form': ['react-form'],
         cryptos: ['./src/main/webapp/cryptos/index.tsx', './src/main/webapp/styles/main.scss']
     },
     resolve: {
@@ -26,9 +27,9 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['src/main/resources/static']),
-
+        
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'react',
+            names: ['react-form', 'react'],
             minChunks: Infinity
         }),
 
