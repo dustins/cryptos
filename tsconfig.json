@@ -6,9 +6,10 @@
     "jsx": "react",
     "noImplicitAny": true,
     "skipLibCheck": true,
-    "module": "es6",
+    "module": "esnext",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "lib": ["es2015", "dom"]
   },
   "files": ["src/main/webapp/cryptos/index.tsx"],
   "exclude": ["node_modules"]

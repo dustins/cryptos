@@ -3,3 +3,72 @@
 body {
   background: white;
 }
+
+#react {
+  header:first-of-type {
+    background: theme-color("primary");
+
+    .navbar {
+      padding-left: 0;
+
+      a {
+        color: color-yiq(theme-color("primary"));
+
+        &.active {
+          $activeColor: theme-color-level("primary", -2);
+          background: $activeColor;
+          color: color-yiq($activeColor);
+        }
+      }
+
+      .dropdown-menu a {
+        $activeColor: theme-color("secondary");
+        color: $activeColor;
+        &.active {
+          background: theme-color-level("secondary", -8);
+        }
+      }
+    }
+    //nav {
+    //  ul {
+    //    display: flex;
+    //    margin-bottom: 0;
+    //
+    //    a {
+    //      padding: 1em;
+    //      display: inline-block;
+    //
+    //      &:hover {
+    //        background: lightgrey;
+    //      }
+    //    }
+    //
+    //    li {
+    //      display: inline-block;
+    //    }
+    //
+    //    li:last-child {
+    //      margin-left: auto
+    //    }
+    //  }
+    //}
+  }
+
+  main:first-of-type {
+    aside {
+      background: theme-color-level("secondary", -8)
+    }
+  }
+
+  footer:first-of-type {
+    background: theme-color("secondary");
+    color: color-yiq(theme-color("secondary"));
+    a {
+      color: color-yiq(theme-color("secondary"));
+    }
+  }
+
+  > section {
+    background: red
+  }
+}

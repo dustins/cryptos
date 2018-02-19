@@ -12,7 +12,7 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
     devtool: "inline-source-map",
     entry: {
-        react: ['react', 'react-dom', 'react-router-dom'],
+        react: ['react', 'react-dom', 'react-router-dom', 'bootstrap/dist/js/bootstrap.min.js'],
         cryptos: ['./src/main/webapp/cryptos/index.tsx', './src/main/webapp/styles/main.scss']
     },
     resolve: {
@@ -42,6 +42,7 @@ module.exports = {
     ],
     output: {
         filename: '[name].js',
+        chunkFilename: '[name].bundle.js',
         path: path.resolve(__dirname, 'src/main/resources/static')
     }
 };
