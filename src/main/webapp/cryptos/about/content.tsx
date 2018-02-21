@@ -12,7 +12,7 @@ export default class About extends Component<AboutComponentProperties,AboutCompo
     }
 
     render() {
-        const title = this.props.match.params.id
+        const title = this.props.match.params.id;
         
         return <>
             <Switch>

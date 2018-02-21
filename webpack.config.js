@@ -44,6 +44,7 @@ module.exports = {
     output: {
         filename: '[name].js',
         chunkFilename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'src/main/resources/static')
+        publicPath: "/public/",
+        path: path.resolve(__dirname, 'src/main/resources/static/public')
     }
 };
